@@ -1,0 +1,69 @@
+AAYUSH GHISING
+IT Engineer | Linux System Administrator | Cybersecurity Enthusiast
+Location: Nepal
+Phone: 9702075730 / 9743975286
+Email: aayushghising482@gmail.com
+LinkedIn: https://www.linkedin.com/in/aayush-ghising-21324227b/
+GitHub: https://github.com/AayushGhising824
+
+SUMMARY
+Motivated IT Engineer with hands-on experience in Linux systems, networking, and system administration.
+RHCSA certified with a strong foundation in cybersecurity principles and currently expanding expertise in
+application penetration testing. Passionate about securing systems, solving technical challenges, and
+continuously upgrading technical skills to stay ahead in the cybersecurity field.
+
+PROFESSIONAL EXPERIENCE
+IT Engineer — Software Shark Tech Pvt Ltd | Dec 2025 – Present
+- Linux server management (RHEL/CentOS)
+- RBAC implementation
+- System monitoring & performance optimization
+- Firewall configuration (firewalld/iptables)
+- System hardening & SELinux
+- Bash automation scripting
+- Backup & restoration validation
+- Kernel updates & patching
+- L1 & L2 technical support
+- Documentation & SOP creation
+- Web app deployment on Linux
+- Basic vulnerability assessment & remediation
+
+EDUCATION
+- Diploma in Computer Application — Global Computer Training Center
+- SEE — Sunrise English Boarding School | 2023
+- SLC — Manakamana Secondary English Boarding School | 2080–20
+
+CERTIFICATIONS
+- RHCSA – Red Hat Certified System Administrator
+
+TECHNICAL SKILLS
+Operating Systems
+- Linux (RHEL/CentOS)
+
+Networking
+- TCP/IP Fundamentals
+- Network Configuration & Troubleshooting
+
+Cybersecurity
+- System Hardening
+- Basic Security Practices
+- Application Penetration Testing (In Progress)
+
+Tools
+- Linux CLI Tools
+- Microsoft Office Suite
+
+Core Strengths
+- Problem Solving
+- Analytical Thinking
+- Technical Troubleshooting
+
+CURRENT LEARNING FOCUS
+- Application Penetration Testing
+- Web Security Fundamentals
+- Vulnerability Assessment Techniques
+
+CAREER OBJECTIVE
+To grow as a cybersecurity professional by applying practical system administration and security skills in a
+challenging environment while continuously learning advanced penetration testing and security defense
+techniques.
+

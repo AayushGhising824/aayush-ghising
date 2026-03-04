@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAYUSH GHISING | IT Engineer • Linux SysAdmin • Cybersecurity</title>
+    <meta name="description"
+        content="AAYUSH GHISING — IT Engineer, Linux System Administrator, and Cybersecurity Enthusiast in Nepal. RHCSA certified. Building resilient, secure, and optimized environments.">
+    <meta name="keywords"
+        content="Aayush Ghising, IT Engineer, Linux System Administrator, Cybersecurity, RHCSA, Nepal, RHEL, CentOS, SELinux, firewalld, iptables, system hardening">
+    <meta name="author" content="AAYUSH GHISING">
+    <meta name="theme-color" content="#05070f">
+
+    <meta property="og:title" content="AAYUSH GHISING | Cybersecurity Portfolio">
+    <meta property="og:description"
+        content="Premium cyber-themed portfolio — Linux systems, networking, hardening, and security learning.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+                    },
+                    colors: {
+                        cyber: {
+                            bg: '#05070f',
+                            panel: 'rgba(255,255,255,0.06)',
+                            border: 'rgba(255,255,255,0.10)',
+                            blue: '#00c2ff',
+                            green: '#39ff14',
+                        }
+                    },
+                    boxShadow: {
+                        glow: '0 0 0 1px rgba(0,194,255,0.15), 0 20px 60px rgba(0,194,255,0.12)',
+                        glow2: '0 0 0 1px rgba(57,255,20,0.14), 0 20px 60px rgba(57,255,20,0.12)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="min-h-screen bg-cyber-bg text-slate-100 antialiased selection:bg-cyber-blue/30 selection:text-white">
+    <!-- Background / FX -->
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+    <div id="cursor-glow" aria-hidden="true"></div>
+    <div id="scroll-progress" aria-hidden="true"></div>
+    <div class="floating-icons" aria-hidden="true">
+        <i class="fa-brands fa-linux"></i>
+        <i class="fa-solid fa-terminal"></i>
+        <i class="fa-solid fa-shield-halved"></i>
+        <i class="fa-solid fa-lock"></i>
+        <i class="fa-solid fa-microchip"></i>
+        <i class="fa-solid fa-network-wired"></i>
+    </div>
+
+    <!-- Nav -->
+    <nav id="navbar" class="fixed top-0 z-50 w-full border-b border-white/10 bg-black/20 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+            <a href="#hero" class="group inline-flex items-center gap-2 font-mono text-sm tracking-wider">
+                <span
+                    class="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/5 shadow-glow transition group-hover:border-cyber-blue/40">
+                    <span class="font-bold text-cyber-blue">AG</span>
+                </span>
+                <span class="hidden sm:inline text-slate-200/90">AAYUSH GHISING</span>
+            </a>
+
+            <div class="hidden items-center gap-1 md:flex">
+                <a class="navlink" href="#about">About</a>
+                <a class="navlink" href="#experience">Experience</a>
+                <a class="navlink" href="#education">Education</a>
+                <a class="navlink" href="#certifications">Certifications</a>
+                <a class="navlink" href="#skills">Skills</a>
+                <a class="navlink" href="#learning">Learning</a>
+                <a class="navlink" href="#objective">Objective</a>
+                <a class="navlink" href="#contact">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <button id="theme-toggle"
+                    class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-slate-200/90 transition hover:border-cyber-blue/40 hover:text-white"
+                    aria-label="Toggle theme">
+                    <i id="theme-icon" class="fa-solid fa-moon"></i>
+                </button>
+
+                <button id="mobile-toggle"
+                    class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-slate-200/90 transition hover:border-cyber-blue/40 hover:text-white md:hidden"
+                    aria-label="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden border-t border-white/10 bg-black/40 px-4 py-3 backdrop-blur-xl md:hidden">
+            <div class="grid gap-1">
+                <a class="navlink" href="#about">About</a>
+                <a class="navlink" href="#experience">Experience</a>
+                <a class="navlink" href="#education">Education</a>
+                <a class="navlink" href="#certifications">Certifications</a>
+                <a class="navlink" href="#skills">Skills</a>
+                <a class="navlink" href="#learning">Learning</a>
+                <a class="navlink" href="#objective">Objective</a>
+                <a class="navlink" href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="hero" class="relative pt-28">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+            <div class="grid items-center gap-10 lg:grid-cols-12">
+                <div class="lg:col-span-7">
+                    <div
+                        class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 font-mono text-xs tracking-widest text-slate-200/80 shadow-glow">
+                        <span
+                            class="inline-flex h-2 w-2 rounded-full bg-cyber-green shadow-[0_0_30px_rgba(57,255,20,0.55)]"></span>
+                        ONLINE • NEPAL • RHCSA
+                    </div>
+
+                    <h1
+                        class="mt-5 text-balance text-5xl font-extrabold leading-[0.95] tracking-tight sm:text-6xl md:text-7xl">
+                        AAYUSH
+                        <span
+                            class="block bg-gradient-to-r from-cyber-blue via-cyber-green to-cyber-blue bg-clip-text text-transparent">GHISING</span>
+                    </h1>
+
+                    <p class="mt-5 text-lg text-slate-200/80 sm:text-xl">
+                        <span class="font-mono text-cyber-blue/90">&gt;</span>
+                        <span id="typed-role" class="font-semibold text-slate-100">IT Engineer</span>
+                        <span id="typed-caret" class="ml-1 font-mono text-cyber-green">▍</span>
+                    </p>
+
+                    <p class="mt-5 max-w-2xl text-pretty text-slate-200/75">
+                        “Securing Systems. Optimizing Infrastructure. Building Resilient Environments.”
+                    </p>
+
+                    <div class="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+                        <a href="#projects"
+                            class="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyber-blue to-cyber-green px-6 py-3 text-sm font-semibold text-black shadow-glow transition hover:brightness-110">
+                            <i class="fa-solid fa-grid-2"></i>
+                            View Projects
+                            <i class="fa-solid fa-arrow-right text-black/70 transition group-hover:translate-x-0.5"></i>
+                        </a>
+                        <a href="Aayush_Ghising_Resume.txt" download="Aayush_Ghising_Resume.docx"
+                            class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyber-blue/40 hover:bg-white/10">
+                            <i class="fa-solid fa-download"></i>
+                            Download Resume
+                        </a>
+                        <div class="flex items-center gap-3 text-sm text-slate-200/70">
+                            <span class="inline-flex items-center gap-2"><i class="fa-solid fa-location-dot text-cyber-blue/90"></i>
+                                Nepal</span>
+                            <span class="hidden sm:inline text-white/10">|</span>
+                            <a class="inline-flex items-center gap-2 hover:text-white"
+                                href="mailto:aayushghising482@gmail.com"><i class="fa-solid fa-envelope text-cyber-green/90"></i>
+                                Email</a>
+                        </div>
+                    </div>
+
+                    <div class="mt-7 flex flex-wrap items-center gap-3">
+                        <a class="chip" href="https://www.linkedin.com/in/aayush-ghising-21324227b/" target="_blank"
+                            rel="noreferrer">
+                            <i class="fa-brands fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a class="chip" href="https://github.com/AayushGhising824" target="_blank" rel="noreferrer">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                        <a class="chip" href="#contact">
+                            <i class="fa-solid fa-paper-plane"></i> Contact
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5">
+                    <div class="glass-card p-6 sm:p-7" data-reveal>
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <p class="font-mono text-xs tracking-widest text-slate-200/70">SECURITY CONSOLE</p>
+                                <h2 class="mt-2 text-xl font-bold">System Status</h2>
+                            </div>
+                            <span
+                                class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/30 px-3 py-1 text-xs text-slate-200/80">
+                                <span class="h-2 w-2 rounded-full bg-cyber-blue"></span>
+                                ACTIVE
+                            </span>
+                        </div>
+
+                        <div class="mt-6 space-y-4">
+                            <div class="metric">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-slate-200/80">Linux Administration</span>
+                                    <span class="font-mono text-cyber-green">READY</span>
+                                </div>
+                                <div class="bar"><span style="width: 92%"></span></div>
+                            </div>
+                            <div class="metric">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-slate-200/80">Networking</span>
+                                    <span class="font-mono text-cyber-green">ONLINE</span>
+                                </div>
+                                <div class="bar"><span style="width: 82%"></span></div>
+                            </div>
+                            <div class="metric">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-slate-200/80">System Hardening</span>
+                                    <span class="font-mono text-cyber-green">ENABLED</span>
+                                </div>
+                                <div class="bar"><span style="width: 78%"></span></div>
+                            </div>
+                            <div class="metric">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-slate-200/80">Application PenTesting</span>
+                                    <span class="font-mono text-cyber-blue">IN PROGRESS</span>
+                                </div>
+                                <div class="bar alt"><span style="width: 55%"></span></div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 rounded-xl border border-white/10 bg-black/30 p-4 font-mono text-xs text-slate-200/80">
+                            <p><span class="text-cyber-blue">$</span> whoami</p>
+                            <p class="mt-1">aayush_ghising</p>
+                            <p class="mt-3"><span class="text-cyber-blue">$</span> echo "Defense in Depth"</p>
+                            <p class="mt-1 text-cyber-green">Defense in Depth</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects (for CTA) -->
+    <section id="projects" class="section-wrap">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+            <div class="section-head" data-reveal>
+                <p class="kicker">FEATURED</p>
+                <h2 class="title">Projects</h2>
+                <p class="subtitle">A clean showcase area. Replace titles/links with your real work.</p>
+            </div>
+
+            <div class="mt-10 grid gap-6 md:grid-cols-3">
+                <article class="glass-card p-6 hover-raise" data-reveal>
+                    <div class="flex items-center justify-between">
+                        <span class="badge"><i class="fa-solid fa-shield-halved"></i> Hardening</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-slate-200/40"></i>
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold">Linux Server Hardening Playbook</h3>
+                    <p class="mt-2 text-sm text-slate-200/70">Baseline CIS-style checks, SELinux policy sanity, and secure service configurations for RHEL/CentOS.</p>
+                    <div class="mt-5 flex flex-wrap gap-2">
+                        <span class="tag">SELinux</span><span class="tag">SSH</span><span class="tag">Audit</span>
+                    </div>
+                    <a class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyber-blue hover:text-white"
+                        href="https://github.com/AayushGhising824" target="_blank" rel="noreferrer">View on GitHub <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </article>
+
+                <article class="glass-card p-6 hover-raise" data-reveal>
+                    <div class="flex items-center justify-between">
+                        <span class="badge"><i class="fa-solid fa-terminal"></i> Automation</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-slate-200/40"></i>
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold">Bash Backup Validator</h3>
+                    <p class="mt-2 text-sm text-slate-200/70">Automates backup verification, restoration tests, and health reporting for critical services.</p>
+                    <div class="mt-5 flex flex-wrap gap-2">
+                        <span class="tag">Bash</span><span class="tag">Cron</span><span class="tag">Reports</span>
+                    </div>
+                    <a class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyber-blue hover:text-white"
+                        href="https://github.com/AayushGhising824" target="_blank" rel="noreferrer">View on GitHub <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </article>
+
+                <article class="glass-card p-6 hover-raise" data-reveal>
+                    <div class="flex items-center justify-between">
+                        <span class="badge"><i class="fa-solid fa-network-wired"></i> Network</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-slate-200/40"></i>
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold">Firewall Audit Toolkit</h3>
+                    <p class="mt-2 text-sm text-slate-200/70">Quickly enumerates rules, detects risky exposures, and produces remediation-ready change notes.</p>
+                    <div class="mt-5 flex flex-wrap gap-2">
+                        <span class="tag">firewalld</span><span class="tag">iptables</span><span class="tag">RBAC</span>
+                    </div>
+                    <a class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyber-blue hover:text-white"
+                        href="https://github.com/AayushGhising824" target="_blank" rel="noreferrer">View on GitHub <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About (with photo) -->
+    <section id="about" class="section-wrap">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+            <div class="section-head" data-reveal>
+                <p class="kicker">PROFILE</p>
+                <h2 class="title">About</h2>
+            </div>
+
+            <div class="mt-10 grid gap-6 lg:grid-cols-12 lg:items-start">
+                <div class="lg:col-span-4" data-reveal>
+                    <div class="glass-card p-6 hover-raise flex flex-col items-center text-center gap-4">
+                        <div class="relative">
+                            <div class="rounded-2xl border border-white/15 bg-black/40 p-1 shadow-glow">
+                                <img
+                                    src="file:///C:/Users/Luff/.cursor/projects/c-Users-Luff-Documents-Personal/assets/c__Users_Luff_AppData_Roaming_Cursor_User_workspaceStorage_3a13879080f8e760676effd3883a1e05_images_IMG-20241127-WA0041-96c982d4-5518-44d1-9b5d-400fdc0a4bde.png"
+                                    alt="Portrait of Aayush Ghising"
+                                    class="h-40 w-32 rounded-xl object-cover"
+                                    loading="lazy"
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-xs font-mono tracking-[0.25em] text-slate-200/60">PROFILE</p>
+                            <h3 class="mt-1 text-lg font-semibold tracking-tight">AAYUSH GHISING</h3>
+                            <p class="mt-1 text-xs font-mono text-slate-200/70">IT Engineer · Linux System Administrator · Cybersecurity Enthusiast</p>
+                        </div>
+                        <div class="mt-1 flex flex-wrap justify-center gap-2">
+                            <span class="badge"><i class="fa-solid fa-location-dot"></i> Nepal</span>
+                            <span class="badge"><i class="fa-solid fa-award"></i> RHCSA</span>
+                            <span class="badge"><i class="fa-solid fa-shield-halved"></i> Security Track</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-8" data-reveal>
+                    <div class="glass-card p-7 sm:p-9">
+                        <p class="font-mono text-xs tracking-widest text-slate-200/70">PROFESSIONAL SUMMARY</p>
+                        <p class="mt-4 text-pretty text-base leading-relaxed text-slate-200/80 sm:text-lg">
+                            Motivated IT Engineer with hands-on experience in Linux systems, networking, and system administration. RHCSA certified with a strong foundation in cybersecurity principles and currently expanding expertise in application penetration testing. Passionate about securing systems, solving technical challenges, and continuously upgrading technical skills to stay ahead in the cybersecurity field.
+                        </p>
+
+                        <div class="mt-7 grid gap-3 sm:grid-cols-2">
+                            <div class="mini-card">
+                                <p class="font-mono text-xs text-slate-200/60">PHONE</p>
+                                <p class="mt-1 text-sm font-semibold">9702075730 / 9743975286</p>
+                            </div>
+                            <div class="mini-card">
+                                <p class="font-mono text-xs text-slate-200/60">EMAIL</p>
+                                <p class="mt-1 text-sm font-semibold">aayushghising482@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-7 flex flex-wrap gap-3">
+                            <a class="chip" href="https://www.linkedin.com/in/aayush-ghising-21324227b/" target="_blank"
+                                rel="noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                            <a class="chip" href="https://github.com/AayushGhising824" target="_blank" rel="noreferrer"><i
+                                    class="fa-brands fa-github"></i> GitHub</a>
+                            <a class="chip" href="#contact"><i class="fa-solid fa-paper-plane"></i> Message</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section-wrap">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+            <div class="section-head" data-reveal>
+                <p class="kicker">CAREER</p>
+                <h2 class="title">Professional Experience</h2>
+                <p class="subtitle">Expandable timeline cards with clean, technical detail.</p>
+            </div>
+
+            <div class="mt-10">
+                <div class="timeline" data-reveal>
+                    <div class="timeline-line" aria-hidden="true"></div>
+
+                    <details class="timeline-item glass-card hover-raise" open>
+                        <summary class="timeline-summary">
+                            <div>
+                                <p class="font-mono text-xs tracking-widest text-slate-200/70">Dec 2025 – Present</p>
+                                <h3 class="mt-1 text-lg font-bold">IT Engineer</h3>
+                                <p class="mt-1 text-sm text-cyber-blue/90">Software Shark Tech Pvt Ltd</p>
+                            </div>
+                            <span class="timeline-pill">Expand</span>
+                        </summary>
+
+                        <div class="mt-5 grid gap-4 md:grid-cols-2">
+                            <ul class="list-inside list-disc space-y-2 text-sm text-slate-200/75">
+                                <li>Linux server management (RHEL/CentOS)</li>
+                                <li>RBAC implementation</li>
+                                <li>System monitoring & performance optimization</li>
+                                <li>Firewall configuration (firewalld/iptables)</li>
+                                <li>System hardening & SELinux</li>
+                                <li>Bash automation scripting</li>
+                            </ul>
+                            <ul class="list-inside list-disc space-y-2 text-sm text-slate-200/75">
+                                <li>Backup & restoration validation</li>
+                                <li>Kernel updates & patching</li>
+                                <li>L1 & L2 technical support</li>
+                                <li>Documentation & SOP creation</li>
+                                <li>Web app deployment on Linux</li>
+                                <li>Basic vulnerability assessment & remediation</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section-wrap">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+            <div class="section-head" data-reveal>
+                <p class="kicker">ACADEMICS</p>
+                <h2 class="title">Education</h2>
+            </div>
+
+            <div class="mt-10 grid gap-6 lg:grid-cols-12">
+                <div class="lg:col-span-5" data-reveal>
+                    <div class="glass-card p-7">
+                        <h3 class="text-lg font-bold">Timeline</h3>
+                        <p class="mt-2 text-sm text-slate-200/70">A clean chronological view with a cyber-style rail.</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-7" data-reveal>
+                    <div class="edu">
+                        <div class="edu-item glass-card p-6 hover-raise">
+                            <p class="font-mono text-xs tracking-widest text-slate-200/70">Diploma</p>
+                            <h4 class="mt-2 font-bold">Diploma in Computer Application</h4>
+                            <p class="mt-1 text-sm text-slate-200/70">Global Computer Training Center</p>
+                        </div>
+                        <div class="edu-item glass-card p-6 hover-raise">
+                            <p class="font-mono text-xs tracking-widest text-slate-200/70">2023</p>
+                            <h4 class="mt-2 font-bold">SEE — Sunrise English Boarding School</h4>
+                            <p class="mt-1 text-sm text-slate-200/70">Class of 2023</p>
+                        </div>
+                        <div class="edu-item glass-card p-6 hover-raise">
+                            <p class="font-mono text-xs tracking-widest text-slate-200/70">2080–20</p>
+                            <h4 class="mt-2 font-bold">SLC — Manakamana Secondary English Boarding School</h4>
+                            <p class="mt-1 text-sm text-slate-200/70">Foundational Education</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="section-wrap">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+            <div class="section-head" data-reveal>
+                <p class="kicker">CREDENTIALS</p>
+                <h2 class="title">Certifications</h2>
+            </div>
+
+            <div class="mt-10 grid gap-6 md:grid-cols-3">
+                <!-- RHCSA -->
+                <div class="glass-card p-7 hover-raise" data-reveal>
+                    <div class="flex items-start gap-4">
+                        <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-black/60">
+                            <img
+                                src="file:///C:/Users/Luff/.cursor/projects/c-Users-Luff-Documents-Personal/assets/c__Users_Luff_AppData_Roaming_Cursor_User_workspaceStorage_3a13879080f8e760676effd3883a1e05_images_image-8a2fa8b4-8618-44ef-b63f-640abf78f17b.png"
+                                alt="Red Hat logo"
+                                class="h-8 w-8 object-contain"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div>
+                            <p class="font-mono text-xs tracking-widest text-slate-200/70">RED HAT</p>
+                            <h3 class="mt-1 text-lg font-bold">RHCSA</h3>
+                            <p class="mt-1 text-sm text-slate-200/70">Red Hat Certified System Administrator</p>
+                            <p class="mt-1 text-xs text-slate-200/60">Issued 2025</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="tag">RHEL</span><span class="tag">Services</span><span class="tag">Storage</span><span class="tag">Users & RBAC</span>
+                    </div>
+                </div>
+
+                <!-- Red Hat System Administration II (RH134) -->
+                <div class="glass-card p-7 hover-raise" data-reveal>
+                    <div class="flex items-start gap-4">
+                        <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-black/60">
+                            <img
+                                src="file:///C:/Users/Luff/.cursor/projects/c-Users-Luff-Documents-Personal/assets/c__Users_Luff_AppData_Roaming_Cursor_User_workspaceStorage_3a13879080f8e760676effd3883a1e05_images_image-8a2fa8b4-8618-44ef-b63f-640abf78f17b.png"
+                                alt="Red Hat logo"
+                                class="h-8 w-8 object-contain"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div>
+                            <p class="font-mono text-xs tracking-widest text-slate-200/70">RED HAT</p>
+                            <h3 class="mt-1 text-base font-bold">Red Hat System Administration II (RH134) – Ver. 10</h3>
+                            <p class="mt-1 text-xs text-slate-200/60">Issued Aug 2025</p>
+                            <p class="mt-3 text-sm text-slate-200/75"><span class="font-semibold">Skills:</span> Linux, Linux System Administration, +2 skills</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cisco Introduction to Cybersecurity -->
+                <div class="glass-card p-7 hover-raise" data-reveal>
+                    <div class="flex items-start gap-4">
+                        <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-black/60">
+                            <img
+                                src="file:///C:/Users/Luff/.cursor/projects/c-Users-Luff-Documents-Personal/assets/c__Users_Luff_AppData_Roaming_Cursor_User_workspaceStorage_3a13879080f8e760676effd3883a1e05_images_image-95369fcd-532a-41c2-9347-46b429f57a5e.png"
+                                alt="Cisco logo"
+                                class="h-7 w-7 object-contain"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div>
+                            <p class="font-mono text-xs tracking-widest text-slate-200/70">CISCO</p>
+                            <h3 class="mt-1 text-base font-bold">Introduction to Cybersecurity</h3>
+                            <p class="mt-1 text-xs text-slate-200/60">Issued Feb 2026</p>
+                            <p class="mt-3 text-sm text-slate-200/75">Foundational concepts of threats, vulnerabilities, and basic cyber defense.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 grid gap-6 md:grid-cols-3">
+                <!-- Tally Certified -->
+                <div class="glass-card p-6 hover-raise md:col-span-1" data-reveal>
+                    <div class="flex items-start gap-4">
+                        <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-black/60">
+                            <img
+                                src="file:///C:/Users/Luff/.cursor/projects/c-Users-Luff-Documents-Personal/assets/c__Users_Luff_AppData_Roaming_Cursor_User_workspaceStorage_3a13879080f8e760676effd3883a1e05_images_image-d55d6c0d-2fc6-4b66-bf6d-d640d88d420c.png"
+                                alt="Tally certification logo"
+                                class="h-7 w-7 object-contain"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div>
+                            <p class="font-mono text-xs tracking-widest text-slate-200/70">STP COMPUTER EDUCATION</p>
+                            <h3 class="mt-1 text-base font-bold">Tally Certified</h3>
+                            <p class="mt-1 text-xs text-slate-200/60">Issued Sep 2023 · Credential ID 86502</p>
+                            <p class="mt-3 text-sm text-slate-200/75"><span class="font-semibold">Skills:</span> Tally, Account Management</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ongoing security track summary -->
+                <div class="glass-card p-6 hover-raise md:col-span-2" data-reveal>
+                    <div class="flex items-center justify-between gap-4">
+                        <div>
+                            <p class="font-mono text-xs tracking-widest text-slate-200/70">SECURITY TRACK</p>
+                            <h3 class="mt-1 text-base font-bold">Applied Cybersecurity Learning</h3>
+                            <p class="mt-1 text-sm text-slate-200/70">Focused on practical web security, vulnerability assessment, and application testing.</p>
+                        </div>
+                        <i class="fa-solid fa-shield-halved text-3xl text-cyber-green/80"></i>
+                    </div>
+                    <div class="mt-4 grid gap-3 sm:grid-cols-2">
+                        <div class="mini-card">
+                            <p class="font-mono text-xs text-slate-200/60">DOMAIN</p>
+                            <p class="mt-1 text-sm font-semibold">Web Security Fundamentals</p>
+                        </div>
+                        <div class="mini-card">
+                            <p class="font-mono text-xs text-slate-200/60">DOMAIN</p>
+                            <p class="mt-1 text-sm font-semibold">Vulnerability Assessment</p>
+                        </div>
+                        <div class="mini-card sm:col-span-2">
+                            <p class="font-mono text-xs text-slate-200/60">STATUS</p>
+                            <p class="mt-1 text-sm font-semibold">Application Penetration Testing (In Progress)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section-wrap">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+            <div class="section-head" data-reveal>
+                <p class="kicker">CAPABILITIES</p>
+                <h2 class="title">Technical Skills</h2>
+                <p class="subtitle">Interactive cards + animated skill bars.</p>
+            </div>
+
+            <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div class="glass-card p-6 hover-raise" data-reveal>
+                    <div class="flex items-center gap-3">
+                        <span class="iconbox"><i class="fa-solid fa-microchip"></i></span>
+                        <h3 class="text-base font-bold">Operating Systems</h3>
+                    </div>
+                    <ul class="mt-4 space-y-2 text-sm text-slate-200/75">
+                        <li><span class="text-cyber-blue">•</span> Linux (RHEL/CentOS)</li>
+                    </ul>
+                    <div class="mt-5">
+                        <div class="skillbar" data-level="92"><span></span></div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 hover-raise" data-reveal>
+                    <div class="flex items-center gap-3">
+                        <span class="iconbox"><i class="fa-solid fa-network-wired"></i></span>
+                        <h3 class="text-base font-bold">Networking</h3>
+                    </div>
+                    <ul class="mt-4 space-y-2 text-sm text-slate-200/75">
+                        <li><span class="text-cyber-blue">•</span> TCP/IP Fundamentals</li>
+                        <li><span class="text-cyber-blue">•</span> Network Configuration & Troubleshooting</li>
+                    </ul>
+                    <div class="mt-5">
+                        <div class="skillbar" data-level="82"><span></span></div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 hover-raise" data-reveal>
+                    <div class="flex items-center gap-3">
+                        <span class="iconbox"><i class="fa-solid fa-shield-halved"></i></span>
+                        <h3 class="text-base font-bold">Cybersecurity</h3>
+                    </div>
+                    <ul class="mt-4 space-y-2 text-sm text-slate-200/75">
+                        <li><span class="text-cyber-green">•</span> System Hardening</li>
+                        <li><span class="text-cyber-green">•</span> Basic Security Practices</li>
+                        <li><span class="text-cyber-green">•</span> Application Penetration Testing (In Progress)</li>
+                    </ul>
+                    <div class="mt-5">
+                        <div class="skillbar alt" data-level="65"><span></span></div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 hover-raise" data-reveal>
+                    <div class="flex items-center gap-3">
+                        <span class="iconbox"><i class="fa-solid fa-terminal"></i></span>
+                        <h3 class="text-base font-bold">Tools</h3>
+                    </div>
+                    <ul class="mt-4 space-y-2 text-sm text-slate-200/75">
+                        <li><span class="text-cyber-blue">•</span> Linux CLI Tools</li>
+                        <li><span class="text-cyber-blue">•</span> Microsoft Office Suite</li>
+                    </ul>
+                    <div class="mt-5">
+                        <div class="skillbar" data-level="76"><span></span></div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 hover-raise" data-reveal>
+                    <div class="flex items-center gap-3">
+                        <span class="iconbox"><i class="fa-solid fa-bolt"></i></span>
+                        <h3 class="text-base font-bold">Core Strengths</h3>
+                    </div>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="pill">Problem Solving</span>
+                        <span class="pill">Analytical Thinking</span>
+                        <span class="pill">Technical Troubleshooting</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 hover-raise" data-reveal>
+                    <div class="flex items-center gap-3">
+                        <span class="iconbox"><i class="fa-solid fa-code"></i></span>
+                        <h3 class="text-base font-bold">Automation</h3>
+                    </div>
+                    <ul class="mt-4 space-y-2 text-sm text-slate-200/75">
+                        <li><span class="text-cyber-blue">•</span> Bash automation scripting</li>
+                        <li><span class="text-cyber-blue">•</span> Documentation & SOP creation</li>
+                    </ul>
+                    <div class="mt-5">
+                        <div class="skillbar" data-level="74"><span></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cybersecurity Workshop -->
+    <section id="cyber-workshop" class="section-wrap">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+            <div class="section-head" data-reveal>
+                <p class="kicker">IMPACT</p>
+                <h2 class="title">Cybersecurity Awareness Session</h2>
+            </div>
+
+            <div class="mt-10 grid gap-6 lg:grid-cols-2">
+                <div class="glass-card p-7 hover-raise" data-reveal>
+                    <p class="text-sm text-slate-200/80">
+                        I was honored to deliver a Cyber Awareness Session to the youth of the Milan Community, focusing on real-world online threats, digital responsibility, and practical strategies for staying safe in today’s connected world.
+                    </p>
+                    <p class="mt-4 text-sm text-slate-200/80">
+                        As technology becomes an essential part of everyday life, cyber awareness is no longer optional. During the session, we covered online privacy, data protection, strong password practices, social engineering risks, and responsible digital behavior. The goal was clear: to equip young individuals with the knowledge and confidence to protect themselves and make informed decisions online.
+                    </p>
+                    <p class="mt-4 text-sm text-slate-200/80">
+                        The engagement, curiosity, and thoughtful questions from the Milan Community Youth made the session truly impactful. It was a privilege to contribute to building a more informed and security-conscious generation. Educating and empowering youth in cybersecurity is not just an initiative; it is a responsibility.
+                    </p>
+                </div>
+                <div class="glass-card p-4 hover-raise" data-reveal>
+                    <div class="grid gap-3">
+                        <div class="overflow-hidden rounded-2xl border border-white/10 bg-black/40">
+                            <img
+                                src="file:///C:/Users/Luff/.cursor/projects/c-Users-Luff-Documents-Personal/assets/c__Users_Luff_AppData_Roaming_Cursor_User_workspaceStorage_3a13879080f8e760676effd3883a1e05_images_IMG_6940-8e3e4591-811f-4bb2-9fbd-b66f4f10999d.png"
+                                alt="Aayush Ghising delivering a cyber awareness talk on stage"
+                                class="w-full object-cover"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="overflow-hidden rounded-2xl border border-white/10 bg-black/40">
+                            <img
+                                src="file:///C:/Users/Luff/.cursor/projects/c-Users-Luff-Documents-Personal/assets/c__Users_Luff_AppData_Roaming_Cursor_User_workspaceStorage_3a13879080f8e760676effd3883a1e05_images_IMG_6933-e82b438c-ecbb-42d8-bfa8-3f142ce597ab.png"
+                                alt="Participants attending the cyber awareness session"
+                                class="w-full object-cover"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Focus -->
+    <section id="learning" class="section-wrap">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+            <div class="section-head" data-reveal>
+                <p class="kicker">ACTIVE</p>
+                <h2 class="title">Current Learning Focus</h2>
+            </div>
+
+            <div class="mt-10 grid gap-6 lg:grid-cols-3">
+                <div class="glass-card p-7 hover-raise lg:col-span-2" data-reveal>
+                    <h3 class="text-lg font-bold">Security Growth Mode</h3>
+                    <p class="mt-2 text-sm text-slate-200/70">Sharpening practical skills for offensive and defensive security workflows.</p>
+                    <div class="mt-6 grid gap-3 sm:grid-cols-2">
+                        <div class="mini-card"><i class="fa-solid fa-bug mr-2 text-cyber-blue/90"></i> Application Penetration Testing</div>
+                        <div class="mini-card"><i class="fa-solid fa-globe mr-2 text-cyber-green/90"></i> Web Security Fundamentals</div>
+                        <div class="mini-card sm:col-span-2"><i class="fa-solid fa-triangle-exclamation mr-2 text-cyber-blue/90"></i> Vulnerability Assessment Techniques</div>
+                    </div>
+                </div>
+                <div class="glass-card p-7 hover-raise" data-reveal>
+                    <p class="font-mono text-xs tracking-widest text-slate-200/70">FOCUS</p>
+                    <h3 class="mt-2 text-lg font-bold">Daily Loop</h3>
+                    <ol class="mt-4 space-y-2 text-sm text-slate-200/75">
+                        <li><span class="text-cyber-green">01</span> Learn concepts</li>
+                        <li><span class="text-cyber-green">02</span> Practice labs</li>
+                        <li><span class="text-cyber-green">03</span> Document findings</li>
+                        <li><span class="text-cyber-green">04</span> Repeat + refine</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objective -->
+    <section id="objective" class="section-wrap">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+            <div class="section-head" data-reveal>
+                <p class="kicker">MISSION</p>
+                <h2 class="title">Career Objective</h2>
+            </div>
+            <div class="mt-10 glass-card p-7 sm:p-9 hover-raise" data-reveal>
+                <p class="text-pretty text-base leading-relaxed text-slate-200/80 sm:text-lg">
+                    To grow as a cybersecurity professional by applying practical system administration and security skills in a challenging environment while continuously learning advanced penetration testing and security defense techniques.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-wrap">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+            <div class="section-head" data-reveal>
+                <p class="kicker">CONNECT</p>
+                <h2 class="title">Contact</h2>
+                <p class="subtitle">Frontend-only form that opens your email client with a prefilled message.</p>
+            </div>
+
+            <div class="mt-10 grid gap-6 lg:grid-cols-12">
+                <div class="lg:col-span-5" data-reveal>
+                    <div class="glass-card p-7">
+                        <h3 class="text-lg font-bold">Direct</h3>
+                        <div class="mt-5 space-y-3 text-sm text-slate-200/75">
+                            <div class="flex items-center gap-3">
+                                <span class="iconbox"><i class="fa-solid fa-phone"></i></span>
+                                <span>9702075730 / 9743975286</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="iconbox"><i class="fa-solid fa-envelope"></i></span>
+                                <a class="hover:text-white" href="mailto:aayushghising482@gmail.com">aayushghising482@gmail.com</a>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="iconbox"><i class="fa-solid fa-location-dot"></i></span>
+                                <span>Nepal</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 flex flex-wrap gap-3">
+                            <a class="chip" href="https://www.linkedin.com/in/aayush-ghising-21324227b/" target="_blank"
+                                rel="noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                            <a class="chip" href="https://github.com/AayushGhising824" target="_blank" rel="noreferrer"><i
+                                    class="fa-brands fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7" data-reveal>
+                    <form id="contact-form" class="glass-card p-7">
+                        <div class="grid gap-4 sm:grid-cols-2">
+                            <div>
+                                <label class="label" for="name">Name</label>
+                                <input id="name" name="name" type="text" class="input" placeholder="Your name" required>
+                            </div>
+                            <div>
+                                <label class="label" for="email">Email</label>
+                                <input id="email" name="email" type="email" class="input" placeholder="you@example.com" required>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <label class="label" for="subject">Subject</label>
+                            <input id="subject" name="subject" type="text" class="input" placeholder="Project inquiry / Collaboration / Hiring">
+                        </div>
+                        <div class="mt-4">
+                            <label class="label" for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" class="input" placeholder="Write your message..." required></textarea>
+                        </div>
+
+                        <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                            <button type="submit"
+                                class="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyber-blue to-cyber-green px-6 py-3 text-sm font-semibold text-black shadow-glow transition hover:brightness-110">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                Send Message
+                                <span class="text-black/70 transition group-hover:translate-x-0.5"><i
+                                        class="fa-solid fa-arrow-right"></i></span>
+                            </button>
+                            <p class="text-xs text-slate-200/60">Tip: This form uses <span class="font-mono">mailto:</span> (frontend only).</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-white/10 py-10">
+        <div
+            class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 text-center sm:flex-row sm:px-6 sm:text-left">
+            <div class="font-mono text-xs tracking-widest text-slate-200/70">
+                Built with Passion for Cybersecurity
+            </div>
+            <div class="flex items-center gap-4 text-sm text-slate-200/70">
+                <a class="hover:text-white" href="#hero">Top</a>
+                <span class="text-white/10">|</span>
+                <a class="hover:text-white" href="https://www.linkedin.com/in/aayush-ghising-21324227b/" target="_blank"
+                    rel="noreferrer">LinkedIn</a>
+                <a class="hover:text-white" href="https://github.com/AayushGhising824" target="_blank"
+                    rel="noreferrer">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Aayush Ghising",
+            "jobTitle": "IT Engineer",
+            "address": { "@type": "PostalAddress", "addressCountry": "NP" },
+            "email": "mailto:aayushghising482@gmail.com",
+            "telephone": ["9702075730", "9743975286"],
+            "url": "https://www.linkedin.com/in/aayush-ghising-21324227b/",
+            "sameAs": ["https://github.com/AayushGhising824"]
+        }
+    </script>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
+
