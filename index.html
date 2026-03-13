@@ -366,7 +366,7 @@
         .floating-shape {
             position: absolute;
             border-radius: 50%;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(139, 92, 246, 0.08));
             animation: float 6s ease-in-out infinite;
         }
 
@@ -378,7 +378,7 @@
         .parallax-shape {
             position: absolute;
             border-radius: 50%;
-            background: linear-gradient(135deg, rgba(251, 191, 36, 0.2), rgba(245, 158, 11, 0.2));
+            background: linear-gradient(135deg, rgba(79, 195, 247, 0.1), rgba(41, 182, 246, 0.1));
             animation: parallax 8s ease-in-out infinite;
         }
 
@@ -1152,25 +1152,50 @@
     </section>
 
     <!-- Technical Skills Section -->
-    <section id="skills" class="py-20">
+    <section id="skills" class="py-20 section-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="reveal">
-                <h2 class="text-4xl font-serif font-bold text-center mb-12">Technical Skills</h2>
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-serif font-bold text-primary mb-4">Technical Skills</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full mb-8"></div>
+                    <p class="text-lg text-secondary max-w-2xl mx-auto">
+                        Comprehensive expertise in Linux administration, cybersecurity, and system infrastructure
+                    </p>
+                </div>
                 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-6">
+                <!-- Technical Expertise Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-16">
                     <!-- Operating Systems -->
-                    <div class="rounded-xl p-4 sm:p-6 card-hover border border-white/20">
-                        <div class="flex flex-col items-center text-center mb-4">
-                            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl mb-3 flex items-center justify-center">
-                                <i class="fas fa-server text-white text-2xl"></i>
+                    <div class="bg-card rounded-2xl border border-custom shadow-xl p-6 card-hover">
+                        <div class="flex flex-col items-center text-center mb-6">
+                            <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl mb-4 flex items-center justify-center shadow-lg">
+                                <i class="fas fa-server text-white text-3xl"></i>
                             </div>
-                            <h3 class="font-bold text-base sm:text-lg text-white">Operating Systems</h3>
+                            <h3 class="font-bold text-xl text-primary mb-2">Operating Systems</h3>
+                            <div class="flex items-center gap-2 mb-4">
+                                <div class="w-2 h-2 bg-accent-primary rounded-full"></div>
+                                <span class="text-sm font-medium text-accent-primary">Expert Level</span>
+                            </div>
                         </div>
-                        <ul class="space-y-2 text-white text-sm sm:text-base text-center">
-                            <li>Linux System Administration</li>
-                            <li class="text-xs sm:text-sm text-white">(RHEL / CentOS)</li>
+                        <ul class="space-y-3 text-secondary text-sm mb-6">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-accent-primary text-xs"></i>
+                                Linux System Administration
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-accent-primary text-xs"></i>
+                                RHEL / CentOS / Ubuntu
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-accent-primary text-xs"></i>
+                                Server Configuration
+                            </li>
                         </ul>
-                        <div class="mt-4">
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-medium text-primary">Proficiency</span>
+                                <span class="text-sm font-bold text-accent-primary">90%</span>
+                            </div>
                             <div class="skill-progress">
                                 <div class="skill-progress-bar" style="width: 0%;" data-progress="90%"></div>
                             </div>
@@ -1178,19 +1203,36 @@
                     </div>
                     
                     <!-- Networking -->
-                    <div class="rounded-xl p-4 sm:p-6 card-hover border border-white/20">
-                        <div class="flex flex-col items-center text-center mb-4">
-                            <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl mb-3 flex items-center justify-center">
-                                <i class="fas fa-network-wired text-white text-2xl"></i>
+                    <div class="bg-card rounded-2xl border border-custom shadow-xl p-6 card-hover">
+                        <div class="flex flex-col items-center text-center mb-6">
+                            <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl mb-4 flex items-center justify-center shadow-lg">
+                                <i class="fas fa-network-wired text-white text-3xl"></i>
                             </div>
-                            <h3 class="font-bold text-base sm:text-lg text-white">Networking</h3>
+                            <h3 class="font-bold text-xl text-primary mb-2">Networking</h3>
+                            <div class="flex items-center gap-2 mb-4">
+                                <div class="w-2 h-2 bg-accent-primary rounded-full"></div>
+                                <span class="text-sm font-medium text-accent-primary">Advanced Level</span>
+                            </div>
                         </div>
-                        <ul class="space-y-2 text-white text-sm sm:text-base text-center">
-                            <li>TCP/IP Fundamentals</li>
-                            <li>Network Configuration</li>
-                            <li>Network Troubleshooting</li>
+                        <ul class="space-y-3 text-secondary text-sm mb-6">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-accent-primary text-xs"></i>
+                                TCP/IP Fundamentals
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-accent-primary text-xs"></i>
+                                Network Configuration
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-accent-primary text-xs"></i>
+                                Network Troubleshooting
+                            </li>
                         </ul>
-                        <div class="mt-4">
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-medium text-primary">Proficiency</span>
+                                <span class="text-sm font-bold text-accent-primary">85%</span>
+                            </div>
                             <div class="skill-progress">
                                 <div class="skill-progress-bar" style="width: 0%;" data-progress="85%"></div>
                             </div>
@@ -1198,39 +1240,73 @@
                     </div>
                     
                     <!-- Cybersecurity -->
-                    <div class="rounded-xl p-4 sm:p-6 card-hover border border-white/20">
-                        <div class="flex flex-col items-center text-center mb-4">
-                            <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-500 rounded-xl mb-3 flex items-center justify-center">
-                                <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    <div class="bg-card rounded-2xl border border-custom shadow-xl p-6 card-hover">
+                        <div class="flex flex-col items-center text-center mb-6">
+                            <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-pink-500 rounded-2xl mb-4 flex items-center justify-center shadow-lg">
+                                <i class="fas fa-shield-alt text-white text-3xl"></i>
                             </div>
-                            <h3 class="font-bold text-base sm:text-lg text-white">Cybersecurity</h3>
+                            <h3 class="font-bold text-xl text-primary mb-2">Cybersecurity</h3>
+                            <div class="flex items-center gap-2 mb-4">
+                                <div class="w-2 h-2 bg-accent-primary rounded-full"></div>
+                                <span class="text-sm font-medium text-accent-primary">Proficient</span>
+                            </div>
                         </div>
-                        <ul class="space-y-2 text-white text-sm sm:text-base text-center">
-                            <li>System Hardening</li>
-                            <li>Security Best Practices</li>
-                            <li>App Pentesting (Learning)</li>
+                        <ul class="space-y-3 text-secondary text-sm mb-6">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-accent-primary text-xs"></i>
+                                System Hardening
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-accent-primary text-xs"></i>
+                                Security Best Practices
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-accent-primary text-xs"></i>
+                                App Pentesting (Learning)
+                            </li>
                         </ul>
-                        <div class="mt-4">
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-medium text-primary">Proficiency</span>
+                                <span class="text-sm font-bold text-accent-primary">75%</span>
+                            </div>
                             <div class="skill-progress">
                                 <div class="skill-progress-bar" style="width: 0%;" data-progress="75%"></div>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Tools -->
-                    <div class="rounded-xl p-4 sm:p-6 card-hover border border-white/20">
-                        <div class="flex flex-col items-center text-center mb-4">
-                            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl mb-3 flex items-center justify-center">
-                                <i class="fas fa-tools text-white text-2xl"></i>
+                    <!-- Tools & Technologies -->
+                    <div class="bg-card rounded-2xl border border-custom shadow-xl p-6 card-hover">
+                        <div class="flex flex-col items-center text-center mb-6">
+                            <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-2xl mb-4 flex items-center justify-center shadow-lg">
+                                <i class="fas fa-tools text-white text-3xl"></i>
                             </div>
-                            <h3 class="font-bold text-base sm:text-lg text-white">Tools</h3>
+                            <h3 class="font-bold text-xl text-primary mb-2">Tools & Tech</h3>
+                            <div class="flex items-center gap-2 mb-4">
+                                <div class="w-2 h-2 bg-accent-primary rounded-full"></div>
+                                <span class="text-sm font-medium text-accent-primary">Expert Level</span>
+                            </div>
                         </div>
-                        <ul class="space-y-2 text-white text-sm sm:text-base text-center">
-                            <li>Linux CLI Tools</li>
-                            <li>Bash Scripting</li>
-                            <li>Microsoft Office</li>
+                        <ul class="space-y-3 text-secondary text-sm mb-6">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-accent-primary text-xs"></i>
+                                Linux CLI Tools
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-accent-primary text-xs"></i>
+                                Bash Scripting
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-accent-primary text-xs"></i>
+                                Microsoft Office Suite
+                            </li>
                         </ul>
-                        <div class="mt-4">
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-medium text-primary">Proficiency</span>
+                                <span class="text-sm font-bold text-accent-primary">95%</span>
+                            </div>
                             <div class="skill-progress">
                                 <div class="skill-progress-bar" style="width: 0%;" data-progress="95%"></div>
                             </div>
@@ -1238,20 +1314,61 @@
                     </div>
                 </div>
                 
-                <!-- Core Strengths -->
-                <div class="mt-16">
-                    <h3 class="text-3xl font-serif font-bold text-center mb-4">Core Strengths</h3>
-                    <p class="text-center text-white mb-8 max-w-2xl mx-auto">
-                        Essential skills and competencies that drive success in cybersecurity and system administration
-                    </p>
+                <!-- Core Competencies -->
+                <div class="bg-card rounded-2xl border border-custom shadow-xl p-8">
+                    <div class="text-center mb-12">
+                        <h3 class="text-3xl font-serif font-bold text-primary mb-4">Core Competencies</h3>
+                        <div class="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full mb-6"></div>
+                        <p class="text-secondary max-w-2xl mx-auto">
+                            Essential skills and capabilities that drive excellence in cybersecurity and system administration
+                        </p>
+                    </div>
                     
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
-                        <div class="bg-white-glass rounded-xl p-6 text-center card-hover group">
-                            <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fas fa-lightbulb text-white text-xl"></i>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="text-center group">
+                            <div class="w-20 h-20 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                                <i class="fas fa-lightbulb text-white text-2xl"></i>
                             </div>
-                            <h4 class="font-bold text-white mb-2">Problem Solving</h4>
-                            <p class="text-sm text-white">Analytical approach to complex technical challenges</p>
+                            <h4 class="font-bold text-primary mb-3">Problem Solving</h4>
+                            <p class="text-sm text-secondary leading-relaxed">
+                                Analytical approach to complex technical challenges with innovative solutions
+                            </p>
+                        </div>
+                        
+                        <div class="text-center group">
+                            <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                                <i class="fas fa-shield-alt text-white text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-primary mb-3">Security Focus</h4>
+                            <p class="text-sm text-secondary leading-relaxed">
+                                Proactive security mindset with emphasis on system hardening and protection
+                            </p>
+                        </div>
+                        
+                        <div class="text-center group">
+                            <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                                <i class="fas fa-cogs text-white text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-primary mb-3">System Optimization</h4>
+                            <p class="text-sm text-secondary leading-relaxed">
+                                Performance tuning and optimization of Linux systems and infrastructure
+                            </p>
+                        </div>
+                        
+                        <div class="text-center group">
+                            <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                                <i class="fas fa-users text-white text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-primary mb-3">Team Collaboration</h4>
+                            <p class="text-sm text-secondary leading-relaxed">
+                                Effective communication and collaboration in technical team environments
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
                         </div>
                         
                         <div class="bg-white-glass rounded-xl p-6 text-center card-hover group">
@@ -2043,88 +2160,161 @@
     </script>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 section-dark">
+    <section id="contact" class="py-20 section-secondary">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="reveal">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl font-serif font-bold text-primary mb-4">Contact</h2>
+                    <h2 class="text-4xl font-serif font-bold text-primary mb-4">Get In Touch</h2>
                     <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full mb-8"></div>
+                    <p class="text-lg text-secondary max-w-2xl mx-auto">
+                        Let's connect and discuss how we can work together on your next project
+                    </p>
                 </div>
                 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     <!-- Contact Form -->
-                    <div>
+                    <div class="bg-card rounded-2xl border border-custom shadow-xl p-8">
+                        <h3 class="text-2xl font-bold text-primary mb-6 flex items-center">
+                            <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-message text-white"></i>
+                            </div>
+                            Send a Message
+                        </h3>
+                        
                         <form id="contact-form" class="space-y-6">
-                            <div>
-                                <label class="block text-sm font-bold text-primary mb-2">Name</label>
-                                <input type="text" name="name" required class="w-full px-4 py-3 bg-tertiary border border-custom rounded-lg text-primary placeholder-tertiary focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 focus:bg-card transition-all">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-semibold text-primary mb-2">First Name</label>
+                                    <input type="text" name="firstName" required class="w-full px-4 py-3 bg-tertiary border border-custom rounded-lg text-primary placeholder-tertiary focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 focus:bg-card transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-primary mb-2">Last Name</label>
+                                    <input type="text" name="lastName" required class="w-full px-4 py-3 bg-tertiary border border-custom rounded-lg text-primary placeholder-tertiary focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 focus:bg-card transition-all">
+                                </div>
                             </div>
                             <div>
-                                <label class="block text-sm font-bold text-primary mb-2">Email</label>
+                                <label class="block text-sm font-semibold text-primary mb-2">Email Address</label>
                                 <input type="email" name="email" required class="w-full px-4 py-3 bg-tertiary border border-custom rounded-lg text-primary placeholder-tertiary focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 focus:bg-card transition-all">
                             </div>
                             <div>
-                                <label class="block text-sm font-bold text-primary mb-2">Message</label>
-                                <textarea name="message" rows="4" required class="w-full px-4 py-3 bg-tertiary border border-custom rounded-lg text-primary placeholder-tertiary focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 focus:bg-card transition-all resize-none"></textarea>
+                                <label class="block text-sm font-semibold text-primary mb-2">Subject</label>
+                                <input type="text" name="subject" required class="w-full px-4 py-3 bg-tertiary border border-custom rounded-lg text-primary placeholder-tertiary focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 focus:bg-card transition-all">
                             </div>
-                            <button type="submit" class="btn-primary w-full justify-center">
-                                <i class="fas fa-paper-plane"></i>
+                            <div>
+                                <label class="block text-sm font-semibold text-primary mb-2">Message</label>
+                                <textarea name="message" rows="5" required class="w-full px-4 py-3 bg-tertiary border border-custom rounded-lg text-primary placeholder-tertiary focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 focus:bg-card transition-all resize-none"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary w-full justify-center py-4">
+                                <i class="fas fa-paper-plane mr-2"></i>
                                 Send Message
                             </button>
                         </form>
                     </div>
                     
-                    <!-- Contact Info -->
-                    <div class="space-y-6">
-                        <div class="rounded-2xl p-8 border border-custom bg-card">
-                            <h3 class="font-bold text-2xl mb-6 text-primary">Get in Touch</h3>
+                    <!-- Contact Information -->
+                    <div class="space-y-8">
+                        <!-- Direct Contact Info -->
+                        <div class="bg-card rounded-2xl border border-custom shadow-xl p-8">
+                            <h3 class="text-2xl font-bold text-primary mb-6 flex items-center">
+                                <div class="w-10 h-10 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mr-3">
+                                    <i class="fas fa-address-card text-white"></i>
+                                </div>
+                                Contact Information
+                            </h3>
+                            
                             <div class="space-y-6">
-                                <div class="flex items-center gap-4 p-4 bg-tertiary rounded-xl border border-custom">
-                                    <div class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                                        <i class="fas fa-user text-white text-xl"></i>
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                        <i class="fas fa-user text-white text-lg"></i>
                                     </div>
                                     <div>
-                                        <p class="text-sm text-tertiary">Name</p>
-                                        <p class="text-primary font-semibold">Aayush Ghising</p>
+                                        <h4 class="font-semibold text-primary mb-1">Full Name</h4>
+                                        <p class="text-secondary">Aayush Ghising</p>
                                     </div>
                                 </div>
                                 
-                                <div class="flex items-center gap-4 p-4 bg-tertiary rounded-xl border border-custom">
-                                    <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                                        <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                        <i class="fas fa-envelope text-white text-lg"></i>
                                     </div>
                                     <div>
-                                        <p class="text-sm text-tertiary">Location</p>
-                                        <p class="text-primary font-semibold">Nepal</p>
+                                        <h4 class="font-semibold text-primary mb-1">Email Address</h4>
+                                        <p class="text-secondary">root@aayushghising.com.np</p>
                                     </div>
                                 </div>
                                 
-                                <div class="flex items-center gap-4 p-4 bg-tertiary rounded-xl border border-custom">
-                                    <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                                        <i class="fas fa-phone text-white text-xl"></i>
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                        <i class="fas fa-phone text-white text-lg"></i>
                                     </div>
                                     <div>
-                                        <p class="text-sm text-tertiary">Phone</p>
-                                        <p class="text-primary font-semibold">9702075730</p>
+                                        <h4 class="font-semibold text-primary mb-1">Phone Number</h4>
+                                        <p class="text-secondary">+977 9702075730</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                        <i class="fas fa-map-marker-alt text-white text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-primary mb-1">Location</h4>
+                                        <p class="text-secondary">Nepal</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <!-- Social Links -->
-                        <div class="flex gap-4 justify-center lg:justify-start">
-                            <a href="https://github.com/AayushGhising824" target="_blank" class="w-14 h-14 bg-gradient-to-br from-gray-600 to-gray-800 rounded-xl flex items-center justify-center hover:scale-110 transition-transform border border-custom">
-                                <i class="fab fa-github text-white text-xl"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/aayush-ghising-21324227b/" target="_blank" class="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center hover:scale-110 transition-transform border border-custom">
-                                <i class="fab fa-linkedin text-white text-xl"></i>
-                            </a>
-                            <a href="https://www.facebook.com/aayush.ghising.927494" target="_blank" class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center hover:scale-110 transition-transform border border-custom">
-                                <i class="fab fa-facebook text-white text-xl"></i>
-                            </a>
-                            <a href="https://www.instagram.com/nowang_oo/" target="_blank" class="w-14 h-14 bg-gradient-to-br from-pink-500 to-purple-600 rounded-xl flex items-center justify-center hover:scale-110 transition-transform border border-custom">
-                                <i class="fab fa-instagram text-white text-xl"></i>
-                            </a>
+                        <!-- Professional Profile -->
+                        <div class="bg-card rounded-2xl border border-custom shadow-xl p-8">
+                            <h3 class="text-2xl font-bold text-primary mb-6 flex items-center">
+                                <div class="w-10 h-10 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-lg flex items-center justify-center mr-3">
+                                    <i class="fas fa-briefcase text-white"></i>
+                                </div>
+                                Professional Profile
+                            </h3>
+                            
+                            <div class="space-y-4">
+                                <p class="text-secondary leading-relaxed">
+                                    IT Engineer specializing in Linux System Administration and Cybersecurity. 
+                                    Passionate about building secure infrastructure and implementing robust security measures.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-tertiary text-primary text-sm rounded-full border border-custom">Linux</span>
+                                    <span class="px-3 py-1 bg-tertiary text-primary text-sm rounded-full border border-custom">Cybersecurity</span>
+                                    <span class="px-3 py-1 bg-tertiary text-primary text-sm rounded-full border border-custom">System Admin</span>
+                                    <span class="px-3 py-1 bg-tertiary text-primary text-sm rounded-full border border-custom">Penetration Testing</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Connections -->
+                        <div class="bg-card rounded-2xl border border-custom shadow-xl p-8">
+                            <h3 class="text-2xl font-bold text-primary mb-6 flex items-center">
+                                <div class="w-10 h-10 bg-gradient-to-br from-pink-400 to-red-500 rounded-lg flex items-center justify-center mr-3">
+                                    <i class="fas fa-share-nodes text-white"></i>
+                                </div>
+                                Connect With Me
+                            </h3>
+                            
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                                <a href="https://github.com/AayushGhising824" target="_blank" class="group flex flex-col items-center p-4 bg-tertiary rounded-xl border border-custom hover:bg-accent-primary hover:text-white transition-all">
+                                    <i class="fab fa-github text-2xl mb-2 group-hover:scale-110 transition-transform"></i>
+                                    <span class="text-sm font-medium">GitHub</span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/aayush-ghising-21324227b/" target="_blank" class="group flex flex-col items-center p-4 bg-tertiary rounded-xl border border-custom hover:bg-accent-primary hover:text-white transition-all">
+                                    <i class="fab fa-linkedin text-2xl mb-2 group-hover:scale-110 transition-transform"></i>
+                                    <span class="text-sm font-medium">LinkedIn</span>
+                                </a>
+                                <a href="https://www.facebook.com/aayush.ghising.927494" target="_blank" class="group flex flex-col items-center p-4 bg-tertiary rounded-xl border border-custom hover:bg-accent-primary hover:text-white transition-all">
+                                    <i class="fab fa-facebook text-2xl mb-2 group-hover:scale-110 transition-transform"></i>
+                                    <span class="text-sm font-medium">Facebook</span>
+                                </a>
+                                <a href="https://www.instagram.com/nowang_oo/" target="_blank" class="group flex flex-col items-center p-4 bg-tertiary rounded-xl border border-custom hover:bg-accent-primary hover:text-white transition-all">
+                                    <i class="fab fa-instagram text-2xl mb-2 group-hover:scale-110 transition-transform"></i>
+                                    <span class="text-sm font-medium">Instagram</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
